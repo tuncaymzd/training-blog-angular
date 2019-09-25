@@ -1,0 +1,24 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': loveItsIsPositive(),
+                'list-group-item-danger': !loveItsIsPositive() && getLoveIts() != 0 }">
+    <div>
+        <p class="text-right">
+            {{ getDate() }}
+        </p>
+        <h1>
+            {{ getTitle() }}
+        </h1>
+        <p>
+            {{ getContent() }}
+        </p>
+    </div>
+    <button class="btn btn-success"
+            (click)="addLoveIt()">
+        loveIt!
+    </button>
+    <button class="btn btn-danger"
+            (click)="removeLoveIt()">
+        Don't loveIt!
+    </button>
+</li>
+
